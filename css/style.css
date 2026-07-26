@@ -86,7 +86,7 @@ img{max-width:100%;height:auto;display:block;}
 .main-visual{
   position:relative;
   overflow:hidden;
-  width:min(420px, 100%);
+  /* width:min(420px, 100%); */
   height:260px;
   margin:0 auto 22px;
   border-radius:34px;
@@ -105,7 +105,7 @@ img{max-width:100%;height:auto;display:block;}
   width:100%;
   height:100%;
   object-fit:cover;
-  object-position:center 45%;
+  object-position:center 100%;
 }
 .play-column{
   width:100%;
@@ -315,7 +315,7 @@ img{max-width:100%;height:auto;display:block;}
 .get-effect{
   position:absolute;
   left:50%;
-  top:36%;
+  top:4px;
   transform:translate(-50%,-50%) scale(0);
   z-index:5;
   display:flex;
@@ -327,16 +327,16 @@ img{max-width:100%;height:auto;display:block;}
 }
 .get-effect.show{animation:getpop .9s ease forwards;}
 @keyframes getpop{
-  0%{transform:translate(-50%,-50%) scale(0); opacity:0;}
-  15%{transform:translate(-50%,-50%) scale(1.15); opacity:1;}
-  30%{transform:translate(-50%,-50%) scale(1); opacity:1;}
-  70%{transform:translate(-50%,-50%) scale(1); opacity:1;}
-  100%{transform:translate(-50%,140%) scale(.35); opacity:0;}
+  0%{transform:translate(-50%,-35%) scale(0); opacity:0;}
+  15%{transform:translate(-50%,0) scale(1.05); opacity:1;}
+  30%{transform:translate(-50%,0) scale(1); opacity:1;}
+  70%{transform:translate(-50%,0) scale(1); opacity:1;}
+  100%{transform:translate(-50%,-130%) scale(.35); opacity:0;}
 }
 .get-icon{
-  width:70px;
-  height:70px;
-  border-radius:16px;
+  width:58px;
+  height:58px;
+  border-radius:12px;
   overflow:hidden;
   background:#ffffff;
   box-shadow:1px 1px 20px rgba(45,126,255,.25);
@@ -477,13 +477,13 @@ footer{
     width:100%;
   }
   .main-visual{
-    width:min(420px, 100%);
+    /* width:min(420px, 100%); */
     height:clamp(220px, 58vw, 320px);
     margin-bottom:18px;
   }
   .main-visual img{
     height:100%;
-    object-position:center 46%;
+    object-position:center 100%;
   }
   .hero-copy{
     margin-bottom:14px;
