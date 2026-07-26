@@ -79,16 +79,17 @@ img{max-width:100%;height:auto;display:block;}
 }
 
 .hero-grid{
-  display:grid;
-  grid-template-columns:minmax(330px, 52%) minmax(360px, 1fr);
-  align-items:center;
-  gap:34px;
+  width:min(760px, 100%);
+  margin:0 auto;
+  display:block;
 }
 .main-visual{
   position:relative;
   overflow:hidden;
-  min-height:650px;
-  border-radius:64px;
+  /* width:min(420px, 100%); */
+  height:260px;
+  margin:0 auto 22px;
+  border-radius:34px;
   background:var(--color-white);
   box-shadow:var(--shadow);
 }
@@ -103,15 +104,17 @@ img{max-width:100%;height:auto;display:block;}
 .main-visual img{
   width:100%;
   height:100%;
-  min-height:650px;
   object-fit:cover;
-  object-position:center center;
+  object-position:center 100%;
 }
 .play-column{
+  width:100%;
+  margin:0 auto;
   min-width:0;
 }
 .hero-copy{
   margin:0 0 18px;
+  text-align:center;
   color:var(--color-white);
   text-shadow:0 2px 18px rgba(45,126,255,.25);
 }
@@ -312,7 +315,7 @@ img{max-width:100%;height:auto;display:block;}
 .get-effect{
   position:absolute;
   left:50%;
-  top:36%;
+  top:4px;
   transform:translate(-50%,-50%) scale(0);
   z-index:5;
   display:flex;
@@ -324,16 +327,16 @@ img{max-width:100%;height:auto;display:block;}
 }
 .get-effect.show{animation:getpop .9s ease forwards;}
 @keyframes getpop{
-  0%{transform:translate(-50%,-50%) scale(0); opacity:0;}
-  15%{transform:translate(-50%,-50%) scale(1.15); opacity:1;}
-  30%{transform:translate(-50%,-50%) scale(1); opacity:1;}
-  70%{transform:translate(-50%,-50%) scale(1); opacity:1;}
-  100%{transform:translate(-50%,140%) scale(.35); opacity:0;}
+  0%{transform:translate(-50%,-35%) scale(0); opacity:0;}
+  15%{transform:translate(-50%,0) scale(1.05); opacity:1;}
+  30%{transform:translate(-50%,0) scale(1); opacity:1;}
+  70%{transform:translate(-50%,0) scale(1); opacity:1;}
+  100%{transform:translate(-50%,-130%) scale(.35); opacity:0;}
 }
 .get-icon{
-  width:70px;
-  height:70px;
-  border-radius:16px;
+  width:58px;
+  height:58px;
+  border-radius:12px;
   overflow:hidden;
   background:#ffffff;
   box-shadow:1px 1px 20px rgba(45,126,255,.25);
@@ -471,18 +474,16 @@ footer{
     padding:0 14px;
   }
   .hero-grid{
-    grid-template-columns:1fr;
-    gap:18px;
+    width:100%;
   }
   .main-visual{
-    min-height:0;
-    height:clamp(260px, 62vw, 430px);
-    border-radius:34px;
+    /* width:min(420px, 100%); */
+    height:clamp(220px, 58vw, 320px);
+    margin-bottom:18px;
   }
   .main-visual img{
-    min-height:0;
     height:100%;
-    object-position:center 46%;
+    object-position:center 100%;
   }
   .hero-copy{
     margin-bottom:14px;
