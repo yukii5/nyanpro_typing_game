@@ -42,17 +42,6 @@
 
   var GAME_SECONDS = 60;
 
-  var GLOBAL_MISTAKE_RANKING = [
-    {kanji:"月見だんご", count: 812},
-    {kanji:"星ノ猫日和", count: 754},
-    {kanji:"深海しずく", count: 689}
-  ];
-  var GLOBAL_PERFECT_RANKING = [
-    {kanji:"黒猫るな", count: 1240},
-    {kanji:"桜庭ゆず", count: 1198},
-    {kanji:"花海とわ", count: 1050}
-  ];
-
   var RANK_TIERS = [
     {min:4000, label:"伝説の寿司打神"},
     {min:2500, label:"皆伝"},
@@ -65,8 +54,6 @@
   window.NYANPRO_CONTENT = {
     gameSeconds: GAME_SECONDS,
     words: WORDS,
-    globalMistakeRanking: GLOBAL_MISTAKE_RANKING,
-    globalPerfectRanking: GLOBAL_PERFECT_RANKING,
     rankTiers: RANK_TIERS
   };
 })(window);

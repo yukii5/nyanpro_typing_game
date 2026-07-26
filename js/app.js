@@ -2,8 +2,6 @@
   var CONTENT = window.NYANPRO_CONTENT || {};
   var WORDS = CONTENT.words || [];
   var GAME_SECONDS = CONTENT.gameSeconds || 60;
-  var GLOBAL_MISTAKE_RANKING = CONTENT.globalMistakeRanking || [];
-  var GLOBAL_PERFECT_RANKING = CONTENT.globalPerfectRanking || [];
   var RANK_TIERS = CONTENT.rankTiers || [];
   var area = document.getElementById("game-area");
   var voiceEnabled = true;
@@ -61,26 +59,6 @@
     el.classList.add("show");
     clearTimeout(bubbleTimer);
     bubbleTimer = setTimeout(function(){ el.classList.remove("show"); }, 1800);
-  }
-
-  function findWordByKanji(kanji){
-    var found = WORDS.filter(function(w){ return w.kanji === kanji; });
-    return found[0] || null;
-  }
-
-  // Ranking data lives in contents/game-content.js until a backend exists.
-
-  function buildRankRows(list){
-    return list.map(function(entry, i){
-      var w = findWordByKanji(entry.kanji);
-      if(!w) return "";
-      return '<div class="rank-row">' +
-        '<div class="rank-num">' + (i+1) + '</div>' +
-        '<div class="r-avatar">' + avatarImg(w) + '</div>' +
-        '<div class="r-name">' + w.kanji + '</div>' +
-        '<div class="r-count">' + entry.count + '</div>' +
-      '</div>';
-    }).join("");
   }
 
   function computeRank(score){
@@ -159,14 +137,6 @@
           '<div class="hud-card"><div class="label">お皿(正解数)</div><div class="value">' + state.completed + '</div></div>' +
           '<div class="hud-card combo"><div class="label">最大コンボ</div><div class="value">' + state.bestCombo + '</div></div>' +
           '<div class="hud-card"><div class="label">打鍵速度</div><div class="value">' + cps + '</div></div>' +
-        '</div>' +
-        '<div class="rank-section mistake">' +
-          '<div class="rank-section-title">全プレイヤー中 いちばん間違えられた子 TOP3<span class="mock-tag">仮データ</span></div>' +
-          '<div class="rank-list">' + buildRankRows(GLOBAL_MISTAKE_RANKING) + '</div>' +
-        '</div>' +
-        '<div class="rank-section perfect">' +
-          '<div class="rank-section-title">全プレイヤー中 いちばんノーミスで打たれた子 TOP3<span class="mock-tag">仮データ</span></div>' +
-          '<div class="rank-list">' + buildRankRows(GLOBAL_PERFECT_RANKING) + '</div>' +
         '</div>' +
         '<div class="gallery">' +
           '<div class="label">集まったVTuberアイコン</div>' +
