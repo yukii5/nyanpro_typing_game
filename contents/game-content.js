@@ -14,7 +14,7 @@
       tokens:[["mo"],["mo"],["i"],["nya"],["n","nn"],["ko"]],
       boo:["にゃにゃ!間違えたにゃ!","そこはちがうにゃん!"], praise:"にゃんぱねぇ!天才にゃ!"},
     {kanji:"雪代ふわり", avatar:"img/avatars/yukishiro-fuwari.png", kana:"ゆきしろふわり", pitch:1.3, rate:0.85, color:"#c9f2ff",
-      tokens:[["yu"],["ki"],["shi","si"],["ro"],["fu"],["wa"],["ri"]],
+      tokens:[["yu"],["ki"],["shi","si"],["ro"],["fu","hu"],["wa"],["ri"]],
       boo:["ふわ…間違えちゃった…。","ゆっくりでいいからね…?"], praise:"すごい…ちゃんとできてたよ…!"},
     {kanji:"黒猫るな", avatar:"img/avatars/kuroneko-runa.png", kana:"くろねこるな", pitch:0.85, rate:0.95, color:"#b6ff6f",
       tokens:[["ku"],["ro"],["ne"],["ko"],["ru"],["na"]],
