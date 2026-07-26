@@ -107,6 +107,30 @@ img{max-width:100%;height:auto;display:block;}
   object-fit:cover;
   object-position:center 100%;
 }
+body[data-game-screen="playing"] .main-visual,
+body[data-game-screen="result"] .main-visual{
+  display:none;
+}
+body[data-game-screen="playing"] .hero-copy .eyebrow,
+body[data-game-screen="playing"] .hero-copy p,
+body[data-game-screen="playing"] .badge-note,
+body[data-game-screen="result"] .hero-copy .eyebrow,
+body[data-game-screen="result"] .hero-copy p,
+body[data-game-screen="result"] .badge-note{
+  display:none;
+}
+body[data-game-screen="playing"] .hero-copy,
+body[data-game-screen="result"] .hero-copy{
+  margin-bottom:12px;
+}
+body[data-game-screen="playing"] .hero-copy h1,
+body[data-game-screen="result"] .hero-copy h1{
+  font-size:32px;
+}
+body[data-game-screen="playing"] #game-area,
+body[data-game-screen="result"] #game-area{
+  margin-top:24px;
+}
 .play-column{
   width:100%;
   margin:0 auto;
