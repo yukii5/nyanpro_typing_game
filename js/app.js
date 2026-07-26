@@ -30,7 +30,7 @@
   }
 
   function avatarImg(word){
-    var src = word && word.avatar ? word.avatar : "img/avatar-placeholder.svg";
+    var src = word && word.avatar ? word.avatar : "img/avatar-placeholder.png";
     var alt = word && word.kanji ? word.kanji : "";
     return '<img class="avatar-img" src="' + escapeHtml(src) + '" alt="' + escapeHtml(alt) + '">';
   }
@@ -186,7 +186,7 @@
       '</div>' +
       '<div class="timebar-outer"><div class="timebar-inner" id="timebar"></div></div>' +
       '<div class="stage">' +
-        '<div class="plate"><img class="plate-img" src="img/sushi.svg" alt=""></div>' +
+        '<div class="plate"><img class="plate-img" src="img/sushi.png" alt=""></div>' +
         '<div class="kanji" id="cur-kanji">' + state.current.kanji + '</div>' +
         '<div class="kana" id="cur-kana">' + state.current.kana + '</div>' +
         '<div class="romaji" id="cur-romaji"></div>' +

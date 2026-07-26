@@ -5,19 +5,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>にゃんタイプ(仮) - VTuberタイピングゲーム テスト版</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Limelight&family=LINE+Seed+JP:wght@800&family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div class="background" aria-hidden="true">
+  <div class="background-texture"></div>
+</div>
 <div class="wrap">
-  <header>
-    <h1>にゃん<span>タイプ</span>(仮)</h1>
-    <p>寿司打風タイピングゲーム ・ 配信テスト版</p>
-    <div class="badge-note">VTuber名はすべて仮名です</div>
+  <header class="site-header">
+    <div class="site-brand">NyanPro Typing</div>
     <button class="voice-toggle on" id="voice-toggle-btn">ボイス ON</button>
   </header>
 
-  <div id="game-area"></div>
+  <main class="hero-grid">
+    <section class="main-visual" aria-label="にゃんタイプ メインビジュアル">
+      <img src="img/main-icon.png" alt="にゃんタイプ メインビジュアル">
+    </section>
+
+    <section class="play-column">
+      <div class="hero-copy">
+        <p class="eyebrow">ROMAJI RUSH</p>
+        <h1>にゃん<span>タイプ</span></h1>
+        <p>VTuber名を打って、アイコンを集めるタイピングゲーム。</p>
+        <div class="badge-note">VTuber名はすべて仮名です</div>
+      </div>
+
+      <div id="game-area"></div>
+    </section>
+  </main>
 
   <footer>NyanPro internal test build - names and readings are placeholders for demo purposes only</footer>
 </div>
