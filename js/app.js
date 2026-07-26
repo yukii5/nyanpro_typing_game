@@ -9,6 +9,11 @@
 
   var state = null;
 
+  // 画面状態をbodyへ反映し、開始・プレイ・結果ごとのレイアウトを切り替える。
+  function setScreenMode(mode){
+    document.body.setAttribute("data-game-screen", mode);
+  }
+
   function pickWord(excludeKanji){
     var pool = WORDS.filter(function(w){return w.kanji !== excludeKanji;});
     return pool[Math.floor(Math.random()*pool.length)];
@@ -69,6 +74,7 @@
   }
 
   function renderStart(){
+    setScreenMode("start");
     area.innerHTML =
       '<div class="stage start-screen">' +
         '<div class="kanji">ROMAJI RUSH</div>' +
@@ -122,6 +128,7 @@
   function endGame(){
     clearInterval(state.timer);
     window.removeEventListener("keydown", handleKey);
+    setScreenMode("result");
     var cps = (state.totalChars / GAME_SECONDS).toFixed(2);
     var rank = computeRank(state.score);
     var galleryHtml = state.collected.map(function(c){
@@ -148,6 +155,7 @@
   }
 
   function renderGame(){
+    setScreenMode("playing");
     area.innerHTML =
       '<div class="hud">' +
         '<div class="hud-card time"><div class="label">残り時間</div><div class="value" id="hud-time">' + state.timeLeft + '</div></div>' +
